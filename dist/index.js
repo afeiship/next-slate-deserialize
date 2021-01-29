@@ -2,8 +2,8 @@
  * name: @jswork/next-slate-deserialize
  * description: Deserializing html to slate nodes.
  * homepage: https://github.com/afeiship/next-slate-deserialize
- * version: 1.0.0
- * date: 2021-01-29 21:52:40
+ * version: 1.0.1
+ * date: 2021-01-29 21:56:15
  * license: MIT
  */
 
