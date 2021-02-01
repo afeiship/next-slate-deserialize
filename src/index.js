@@ -23,7 +23,7 @@
           return opt.process(el, children);
         };
 
-        return processNode(document.body, options);
+        return processNode(document.body, options).concat({ text: '' });
       }
     }
   });
