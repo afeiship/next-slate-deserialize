@@ -2,8 +2,7 @@
   var global = typeof window !== 'undefined' ? window : this || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var DEFAULT_OPTIONS = {
-    process: nx.stubValue,
-    joined: '\n'
+    process: nx.stubValue
   };
 
   var NxSlateDeserialize = nx.declare('nx.SlateDeserialize', {

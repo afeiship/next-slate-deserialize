@@ -2,8 +2,8 @@
  * name: @jswork/next-slate-deserialize
  * description: Deserializing html to slate nodes.
  * homepage: https://github.com/afeiship/next-slate-deserialize
- * version: 1.0.0
- * date: 2021-01-29 10:43:32
+ * version: 1.0.1
+ * date: 2021-01-29 21:56:15
  * license: MIT
  */
 
@@ -11,8 +11,7 @@
   var global = typeof window !== 'undefined' ? window : this || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var DEFAULT_OPTIONS = {
-    process: nx.stubValue,
-    joined: '\n'
+    process: nx.stubValue
   };
 
   var NxSlateDeserialize = nx.declare('nx.SlateDeserialize', {
