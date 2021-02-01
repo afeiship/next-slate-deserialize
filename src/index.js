@@ -24,7 +24,10 @@
 
         // buggy code
         var nodes = processNode(document.body, options);
-        nodes[nodes.length - 1].children.push({ text: '' });
+        var len = nodes.length;
+        if (len > 0) {
+          nodes[len - 1].children.push({ text: '' });
+        }
         return nodes;
       }
     }
