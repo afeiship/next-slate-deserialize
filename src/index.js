@@ -2,14 +2,19 @@
   var global = typeof window !== 'undefined' ? window : this || Function('return this')();
   var nx = global.nx || require('@jswork/next');
   var DEFAULT_OPTIONS = {
+    type: 'rich',
     process: nx.stubValue
+  };
+  var DEFAULT_TEXT = {
+    rich: [{ type: 'paragraph', children: [{ text: '' }] }],
+    text: [{ children: [{ text: '' }] }]
   };
 
   var NxSlateDeserialize = nx.declare('nx.SlateDeserialize', {
     statics: {
       parse: function (inString, inOptions) {
-        if (!inString) return [{ text: '' }];
         var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
+        if (!inString) return DEFAULT_TEXT[options.type];
         var document = new DOMParser().parseFromString(inString, 'text/html');
         var processNode = function (el, opt) {
           var el = el || document.body;

@@ -21,7 +21,9 @@
 
   describe('NxSlateDeserialize.methods', function () {
     test('serialize empty should return the slate empty node', () => {
-      expect(NxSlateDeserialize.parse('', { process })).toEqual([{ text: '' }]);
+      expect(NxSlateDeserialize.parse('', { process })).toEqual([
+        { type: 'paragraph', children: [{ text: '' }] }
+      ]);
     });
     test('slate parse(deserialize) html to nodes', () => {
       var html = `<p>An opening paragraph with a <a href="https://example.com">link</a> in it.</p><blockquote><p>A wise quote.</p></blockquote><p>A closing paragraph!</p>`;
