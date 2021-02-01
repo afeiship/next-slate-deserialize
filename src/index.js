@@ -25,9 +25,7 @@
         // buggy code
         var nodes = processNode(document.body, options);
         var len = nodes.length;
-        if (len > 0) {
-          nodes[len - 1].children.push({ text: '' });
-        }
+        len > 0 && nodes[len - 1].children.push({ text: '' });
         return nodes;
       }
     }
