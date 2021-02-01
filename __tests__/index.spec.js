@@ -48,9 +48,8 @@
         },
         {
           type: 'paragraph',
-          children: [{ text: 'A closing paragraph!' }]
-        },
-        { text: '' }
+          children: [{ text: 'A closing paragraph!' }, { text: '' }]
+        }
       ]);
     });
   });
