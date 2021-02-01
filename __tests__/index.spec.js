@@ -49,7 +49,8 @@
         {
           type: 'paragraph',
           children: [{ text: 'A closing paragraph!' }]
-        }
+        },
+        { text: '' }
       ]);
     });
   });

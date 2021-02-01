@@ -3,7 +3,7 @@
  * description: Deserializing html to slate nodes.
  * homepage: https://github.com/afeiship/next-slate-deserialize
  * version: 1.0.1
- * date: 2021-01-29 21:56:15
+ * date: 2021-02-01 18:00:40
  * license: MIT
  */
 
@@ -31,7 +31,7 @@
           return opt.process(el, children);
         };
 
-        return processNode(document.body, options);
+        return processNode(document.body, options).concat({ text: '' });
       }
     }
   });
