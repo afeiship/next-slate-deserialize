@@ -8,6 +8,7 @@
   var NxSlateDeserialize = nx.declare('nx.SlateDeserialize', {
     statics: {
       parse: function (inString, inOptions) {
+        if (!inString) return [{ text: '' }];
         var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
         var document = new DOMParser().parseFromString(inString, 'text/html');
         var processNode = function (el, opt) {

@@ -3,7 +3,7 @@
  * description: Deserializing html to slate nodes.
  * homepage: https://github.com/afeiship/next-slate-deserialize
  * version: 1.0.4
- * date: 2021-02-01 18:33:13
+ * date: 2021-02-01 18:39:02
  * license: MIT
  */
 
@@ -17,6 +17,7 @@
   var NxSlateDeserialize = nx.declare('nx.SlateDeserialize', {
     statics: {
       parse: function (inString, inOptions) {
+        if (!inString) return [{ text: '' }];
         var options = nx.mix(null, DEFAULT_OPTIONS, inOptions);
         var document = new DOMParser().parseFromString(inString, 'text/html');
         var processNode = function (el, opt) {
