@@ -1,6 +1,6 @@
 {
   "name": "@jswork/next-slate-deserialize",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Deserializing html to slate nodes.",
   "homepage": "https://github.com/afeiship/next-slate-deserialize",
   "author": {
