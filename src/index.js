@@ -28,7 +28,7 @@
           return opt.process(el, children);
         };
 
-        // buggy code
+        // buggy code when list-item will trigger.
         var nodes = processNode(document.body, options);
         var len = nodes.length;
         var children = nodes[len - 1].children;
